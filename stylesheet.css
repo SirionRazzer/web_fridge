@@ -1,0 +1,229 @@
+/*version 0.1*/
+
+@import url(http://fonts.googleapis.com/css?family=Kalam);
+
+body{
+	margin:0px;
+}
+body > div{
+	display:flex;
+	flex-flow:row wrap;
+}
+body > div > header, nav, main, aside, footer{
+	color: black;
+	font-size: 1em;
+	/*text-align: center;*/
+	background-color: white;
+}
+
+body > div > header{
+	text-align: center;
+	order:1;
+	height:100px;
+	flex:0 1 100%;
+	margin-top: 5em;
+	margin-bottom: 9em;
+
+	padding: 15px;
+
+}
+
+body > div > nav{
+	order:2;
+	flex:0 1 100%;
+	display: flex;
+	justify-content:center;
+}
+body > div > main{
+	order:4;
+	min-height:400px;
+	flex: 1;
+	padding: 10px;
+}
+
+body > div > aside.right{
+	order:3;
+	flex:0 1 250px;
+	min-width: 10%;
+}
+
+body > div > aside.left{
+	order:5;
+	flex:0 1 200px;
+	padding: 10px;
+}
+body > div > footer{
+	order:6;
+	flex:0 1 100%;
+	background-color: #d3d3d3;
+}
+
+.menu {
+	display: flex;
+	justify-content:center;
+	padding-top: 20px;
+}
+
+div.menu::before {
+	content: "";
+	position: absolute;
+	margin-top: -4.5em;
+	height: 1px;
+	width: 9em;
+	border-bottom: 6px solid black;
+}
+
+.menu_item1 {
+	height: 65px;
+	width: 55px;
+	background: transparent url('fridge_1_off.png') center top no-repeat;
+	background-size: contain;
+}
+
+.menu_item1:hover {
+	background-image: url('fridge_1_on.png');
+	transition: all .2s ease-in-out;
+}
+
+.active1 {
+	background-image: url('fridge_1_on.png');
+}
+
+.menu_item2 {
+	height: 65px;
+	width: 55px;
+	background: transparent url('fridge_2_off.png') center top no-repeat;
+	background-size: contain;
+}
+
+.menu_item2:hover {
+	background-image: url('fridge_2_on.png');
+	transition: all .2s ease-in-out;
+}
+
+.active2 {
+	background-image: url('fridge_2_on.png');
+}
+
+.menu_item3 {
+	height: 65px;
+	width: 55px;
+	background: transparent url('fridge_3_off.png') center top no-repeat;
+	background-size: contain;
+}
+
+.menu_item3:hover {
+	background-image: url('fridge_3_on.png');
+	transition: all .2s ease-in-out;
+}
+
+.active3 {
+	background-image: url('fridge_3_on.png');
+}
+
+.menu_item4 {
+	height: 65px;
+	width: 55px;
+	background: transparent url('fridge_4_off.png') center top no-repeat;
+	background-size: contain;
+}
+
+.menu_item4:hover {
+	background-image: url('fridge_4_on.png');
+	transition: all .2s ease-in-out;
+}
+
+.active4 {
+	background-image: url('fridge_4_on.png');
+}
+
+.menu_item5 {
+	height: 65px;
+	width: 55px;
+	background: transparent url('fridge_5_off.png') center top no-repeat;
+	background-size: contain;
+}
+
+.menu_item5:hover {
+	background-image: url('fridge_5_on.png');
+	transition: all .2s ease-in-out;
+}
+
+.active5 {
+	background-image: url('fridge_5_on.png');
+}
+
+.stripped_line {
+	height: 9px;
+	background-image: url(border.png);
+	background-repeat: repeat-x;
+	margin-top: 0;
+	margin-bottom: 0px;
+}
+
+.footer_container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.footer_item1 {
+}
+
+.footer_item2 {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+.fic {
+	min-width: 200px;
+	max-width: 300px;
+	padding: 10px;
+	margin: 0px;
+}
+
+.fi_card1 {
+	flex: 3 1 auto;
+}
+
+.fi_card2 {
+	flex: 0 1 auto;
+}
+
+.fi_card3 {
+	flex: 0 1 auto;
+}
+
+.fi_card4 {
+
+	flex: 0 1 auto;
+}
+
+@media screen and (max-width: 767px) {
+	body > div {
+		flex-flow: column wrap;
+	}
+
+	body > div > aside.right {
+		flex: 0 1 100%;
+		width: 100%;
+		order: 4;
+	}
+
+	body > div > aside.left {
+		flex: 0 1 100%;
+	}
+
+	.footer_item2 {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.fic {
+		max-width: 100%;
+	}
+}
