@@ -10,6 +10,7 @@ table, th, td {
 table {
 	border-collapse: collapse;
 	width: 100%;
+	border: 1px solid #c9c9c9;
 }
 
 th, td {
@@ -27,6 +28,7 @@ tr#stripped:nth-child(odd) {
 body{
 	margin:0px;
 	font-family: Helvetica;
+	background-color: #f7f7f7;
 }
 body > div{
 	display:flex;
@@ -36,7 +38,7 @@ body > div > header, nav, main, aside, footer{
 	color: black;
 	font-size: 1em;
 	/*text-align: center;*/
-	background-color: white;
+	/*background-color: white;*/
 }
 
 body > div > header{
@@ -44,10 +46,9 @@ body > div > header{
 	order:1;
 	height:100px;
 	flex:0 1 100%;
-	margin-top: 5em;
+	margin-top: 2em;
 	margin-bottom: 4em;
 	padding: 15px;
-
 }
 
 body > div > nav{
@@ -55,12 +56,15 @@ body > div > nav{
 	flex:0 1 100%;
 	display: flex;
 	justify-content:center;
+	margin-bottom: 15px;
 }
 body > div > main{
 	order:4;
 	min-height:400px;
 	flex: 1;
-	padding: 10px;
+	padding: 0px 0px 10px 0px;
+	min-width: 30%;
+	background-color: white;
 }
 
 body > div > aside.right{
@@ -72,7 +76,9 @@ body > div > aside.right{
 body > div > aside.left{
 	order:5;
 	flex:0 1 200px;
-	padding: 10px;
+	padding: 0px 10px 10px 10px;
+	margin-left: 30px;
+	margin-bottom: 30px;
 }
 body > div > footer{
 	order:6;
@@ -181,8 +187,6 @@ div.menu::before {
 	background-repeat: repeat-x;
 	margin-top: 0;
 	margin-bottom: 0px;
-	border-bottom: 1px solid #c9c9c9;
-
 }
 
 .footer_container {
@@ -209,6 +213,7 @@ div.menu::before {
 	min-width: 200px;
 	max-width: 300px;
 	padding: 10px;
+	margin-bottom: 20px;
 }
 
 .fi_card1 {
@@ -217,6 +222,8 @@ div.menu::before {
 
 .fi_card2 {
 	flex: 0 1 auto;
+	margin-right: 15px;
+	margin-left:  15px;
 }
 
 .fi_card3 {
@@ -225,7 +232,7 @@ div.menu::before {
 
 .fi_card4 {
 
-	flex: 0 1 auto;
+	flex: 0 1 200px;
 }
 
 @media screen and (max-width: 767px) {
@@ -241,6 +248,7 @@ div.menu::before {
 
 	body > div > aside.left {
 		flex: 0 1 100%;
+		margin: 0;
 	}
 
 	.footer_item2 {
